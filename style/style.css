@@ -115,3 +115,68 @@ transition-duration: .3s;
     top: 125px;
     opacity: 1;
 }
+
+.frame3{
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    border: 1px solid red;
+    position: relative;
+}
+.frame3 .F_glass{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    position: relative;
+    top: 150px;
+    left: 80px;
+  
+}
+.g1,
+.g2,
+.g3{
+position: absolute;
+width: 100px;
+left: 80px;
+opacity: 0;
+transition-duration: 2s;
+/* transition-timing-function: linear; */
+}
+.g1{
+    z-index: 1;
+    transition-timing-function: cubic-bezier(.1, -.1, .1, 2);
+    transform: scale(0);
+}
+.g2{
+    z-index: 2;
+    transition-timing-function: cubic-bezier(.1, -.1, .1, 2);
+    transform: scale(0);
+}
+.g3{
+   z-index: 3;
+    transition-timing-function: cubic-bezier(.1, -.1, .1, 2);
+    transform: scale(0);
+}
+.frame3:hover .g1{
+    left: 400px;
+    top: 100px;
+    opacity: 1;
+    transition-delay: .5s;
+}
+.frame3:hover .g2{
+    left: 400px;
+    top: 300px;
+    opacity: 1;
+    transition-delay: .3s;
+}
+.frame3:hover .g3{
+    left:400px;
+    top: 200px;
+    opacity: 1;
+    transition-delay: .2s;
+}
+.frame3:hover .g1,
+.frame3:hover .g2,
+.frame3:hover .g3{
+    transform: scale(1);
+}
