@@ -85,35 +85,51 @@ top: 60px
 position: absolute;
 width: 100px;
 opacity: 0;
-transition-duration: .3s;
+transition-duration: 2s;
 /* transition-timing-function: linear; */
+}
+.glass1{
+    z-index: 3;
+
+    transition-timing-function: cubic-bezier(.1, -.1, .1, 2);
+    transform: scale(0);
+    
 }
 .glass2{
     z-index: 2;
-    transition-delay: .6s;
-    transition-timing-function: cubic-bezier(.5, -.1, .5, 2);
+
+    transition-timing-function: cubic-bezier(.1, -.1, .1, 2);
+    transform: scale(0);
     
 }
 .glass3{
    z-index: 1;
-    transition-delay: .7s;
-    transition-timing-function: cubic-bezier(.5, -.1, .5, 2);
-    
+  
+    transition-timing-function: cubic-bezier(.1, -.1, .1, 2);
+    transform: scale(0);
 }
 .P_glass:hover .glass1{
     left: 300px;
     top: -2px;
     opacity: 1;
+    transition-delay: .3s;
 }
 .P_glass:hover .glass2{
     left: 300px;
     top: 60px;
+    transition-delay: .6s;
     opacity: 1;
 }
 .P_glass:hover .glass3{
     left: 300px;
     top: 125px;
     opacity: 1;
+    transition-delay: .7s;
+}
+.P_glass:hover .glass1,
+.P_glass:hover .glass2,
+.P_glass:hover .glass3{
+    transform: scale(2);
 }
 
 .frame3{
