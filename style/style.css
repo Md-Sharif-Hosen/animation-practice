@@ -1,0 +1,43 @@
+.frame{
+    border: 1px solid red;
+    height: 400px;
+    width: 600px;
+    margin: auto;
+    position: relative;
+}
+img{
+    width: 100%;
+}
+.glass,
+.glass1,
+.glass2,
+.glass3{
+position: absolute;
+width: 150px;
+display: none;
+}
+.glass{
+     display: block;
+    width: 250px;
+    left: 20px;
+   top: 60px
+   
+   
+}
+.glass1{
+    left: 400px;
+    top: 60px;
+}
+.glass2{
+    left: 400px;
+    top: 160px;
+}
+.glass3{
+    left: 400px;
+    top: 260px;
+}
+.frame:hover .glass1,
+.frame:hover .glass2,
+.frame:hover .glass3{
+    display: block;
+}
