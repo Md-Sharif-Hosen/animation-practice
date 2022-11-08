@@ -14,30 +14,104 @@ img{
 .glass3{
 position: absolute;
 width: 150px;
-display: none;
+opacity: 0;
+transition-duration: .3s;
+left: 20px;
+top: 60px
+/* transition-timing-function: linear; */
 }
 .glass{
-     display: block;
+   opacity: 1;
+   z-index: 4;
     width: 250px;
     left: 20px;
    top: 60px
-   
-   
 }
 .glass1{
-    left: 400px;
-    top: 60px;
+  z-index: 3;
+    transition-delay: .5s;
+    transition-timing-function: cubic-bezier(.5, -1, .5, 2);
 }
 .glass2{
-    left: 400px;
-    top: 160px;
+    z-index: 2;
+    transition-delay: .6s;
+    transition-timing-function: cubic-bezier(.5, -.1, .5, 2);
+    
 }
 .glass3{
+   z-index: 1;
+    transition-delay: .7s;
+    transition-timing-function: cubic-bezier(.5, -.1, .5, 2);
+    
+}
+
+.frame:hover .glass1{
+    left: 400px;
+    top: 60px;
+    opacity: 1;
+}
+.frame:hover .glass2{
+    left: 400px;
+    top: 160px;
+    opacity: 1;
+}
+.frame:hover .glass3{
     left: 400px;
     top: 260px;
+    opacity: 1;
 }
-.frame:hover .glass1,
-.frame:hover .glass2,
-.frame:hover .glass3{
-    display: block;
+.frame2{
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    border: 1px solid red;
+    position: relative;
+}
+.P_glass{
+    border: 1px solid red;
+    height: 150px;
+    width: 120px;
+    position: absolute;
+    position: relative;
+    background-image: url(../image/glass-1.png);
+    background-size: 150px;
+    background-repeat: no-repeat;
+    top: 150px;
+    left: 80px;
+}
+.glass1,
+.glass2,
+.glass3{
+position: absolute;
+width: 80px;
+opacity: 0;
+transition-duration: .3s;
+/* transition-timing-function: linear; */
+}
+.glass2{
+    z-index: 2;
+    transition-delay: .6s;
+    transition-timing-function: cubic-bezier(.5, -.1, .5, 2);
+    
+}
+.glass3{
+   z-index: 1;
+    transition-delay: .7s;
+    transition-timing-function: cubic-bezier(.5, -.1, .5, 2);
+    
+}
+.P_glass:hover .glass1{
+    left: 300px;
+    top: -2px;
+    opacity: 1;
+}
+.P_glass:hover .glass2{
+    left: 300px;
+    top: 60px;
+    opacity: 1;
+}
+.P_glass:hover .glass3{
+    left: 300px;
+    top: 125px;
+    opacity: 1;
 }
